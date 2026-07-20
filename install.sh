@@ -18,7 +18,7 @@ set -Eeuo pipefail
 ###############################################################################
 # Configuration
 ###############################################################################
-DOTFILES_REPO="${DOTFILES_REPO:-https://github.com/<YOUR_USERNAME>/dotfiles.git}"
+DOTFILES_REPO="${DOTFILES_REPO:-https://github.com/ttake-spalab/dotfiles.git}"
 DOTFILES_DIR="${DOTFILES_DIR:-${HOME}/dotfiles}"
 
 ROLE_DIR="${HOME}/.config/dotfiles"
