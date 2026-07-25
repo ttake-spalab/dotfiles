@@ -3,7 +3,11 @@
   programs.git = {
     enable = true;
 
-    userName = "ttake-spalab";
-    userEmail = "t.take.spalab@gmail.com";
+    settings = {
+      user = {
+        name = "ttake-spalab";
+        email = "t.take.spalab@gmail.com";
+      };
+    };
   };
 }

@@ -17,9 +17,11 @@
 
   imports = [
     ./modules/gh/default.nix
+    # ./modules/ghostty/default.nix
     ./modules/git/default.nix
     ./modules/nvim/default.nix
     ./modules/tmux/default.nix
+    ./modules/uv/default.nix
   ];
 
   # The home.packages option allows you to install Nix packages into your
