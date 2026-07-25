@@ -16,8 +16,10 @@
   home.stateVersion = "26.05"; # Please read the comment before changing.
 
   imports = [
-    ./modules/tmux/default.nix
+    ./modules/gh/default.nix
+    ./modules/git/default.nix
     ./modules/nvim/default.nix
+    ./modules/tmux/default.nix
   ];
 
   # The home.packages option allows you to install Nix packages into your
