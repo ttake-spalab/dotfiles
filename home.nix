@@ -72,6 +72,7 @@
     #   org.gradle.console=verbose
     #   org.gradle.daemon.idletimeout=3600000
     # '';
+    ".config/gh/config.yaml".source = config.lib.file.mkOutOfStoreSymlink "${config.home.homeDirectory}/.config/gh/config.yaml";
   };
 
   # Home Manager can also manage your environment variables through
