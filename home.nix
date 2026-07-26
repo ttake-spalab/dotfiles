@@ -15,6 +15,12 @@
   # release notes.
   home.stateVersion = "26.05"; # Please read the comment before changing.
 
+  home.sessionPath = [
+    "/opt/homebrew/bin"
+    "/opt/homebrew/sbin"
+    "/usr/local/bin"
+  ];
+
   imports = [
     ./modules/gh/default.nix
     # ./modules/ghostty/default.nix
@@ -22,6 +28,7 @@
     ./modules/nvim/default.nix
     ./modules/tmux/default.nix
     ./modules/uv/default.nix
+    ./modules/zsh/default.nix
   ];
 
   # The home.packages option allows you to install Nix packages into your
@@ -83,6 +90,7 @@
   #
   home.sessionVariables = {
     # EDITOR = "emacs";
+    LANG = "ja_JP.UTF-8";
   };
 
   # Let Home Manager install and manage itself.
