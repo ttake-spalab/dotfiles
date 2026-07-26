@@ -22,6 +22,7 @@
   ];
 
   imports = [
+    ./modules/direnv/default.nix
     ./modules/gh/default.nix
     # ./modules/ghostty/default.nix
     ./modules/git/default.nix
