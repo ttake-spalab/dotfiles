@@ -9,7 +9,7 @@
       # 1行目: [username@hostname] path (git_branch)
       # 2行目: character (# や $)
       format = ''
-         [$username@$hostname](green):$directory $git_branch[\[$git_status\]](red)
+         [$username@$hostname](green):$directory $git_branch$git_status
         $character'';
       # format = ''
       #   [\[$username@$hostname\]](green) $directory $git_branch[\[$git_status\]](red)
@@ -48,7 +48,7 @@
 
       # Git status 表示
       git_status = {
-        format = "[$all_status$ahead_behind]($style)";
+        format = "[\\[$all_status$ahead_behind\\]]($style)";
       };
 
       # 2行目の入力記号（一般ユーザーは '#', rootは '# ' などカスタマイズ可能）
