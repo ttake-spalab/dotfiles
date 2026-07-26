@@ -36,12 +36,6 @@
       stty -ixon
   
       bindkey '^R' history-incremental-pattern-search-backward
-  
-      # PROMPTをstarshipに移行したらautoloadは不要になりそう
-      autoload -Uz colors
-      colors
-      PROMPT="%{''${fg[green]}%}[%n@%m]%{''${reset_color}%} %~
-      %# "
     '';
 
   };

@@ -26,6 +26,7 @@
     # ./modules/ghostty/default.nix
     ./modules/git/default.nix
     ./modules/nvim/default.nix
+    ./modules/starship/default.nix
     ./modules/tmux/default.nix
     ./modules/uv/default.nix
     ./modules/zsh/default.nix
