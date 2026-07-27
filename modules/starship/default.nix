@@ -6,7 +6,7 @@
 
     settings = {
       # 2行プロンプトのレイアウト定義
-      # 1行目: ` username@hostname path  git_branch [git_status]
+      # 1行目: ` username@hostname path  git_branchgit_status
       # 2行目: character `> `
       format = ''
          [$username@$hostname](green):$directory $git_branch$git_status
@@ -40,12 +40,13 @@
       # Gitブランチ表示の設定
       git_branch = {
         style = "#f5bde6";
-        format = "[$symbol$branch]($style) ";
+        format = "[$symbol$branch]($style)";
       };
 
       # Git status 表示
       git_status = {
-        format = "[\\[$all_status$ahead_behind\\]]($style)";
+        style = "#ee87d2";
+        format = "[$all_status$ahead_behind]($style)";
       };
 
       # 2行目の入力記号（一般ユーザーは '% ', rootは '# ' などカスタマイズ可能）
