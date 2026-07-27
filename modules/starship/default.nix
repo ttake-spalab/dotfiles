@@ -6,14 +6,11 @@
 
     settings = {
       # 2行プロンプトのレイアウト定義
-      # 1行目: [username@hostname] path (git_branch)
-      # 2行目: character (# や $)
+      # 1行目: ` username@hostname path  git_branch [git_status]
+      # 2行目: character `> `
       format = ''
          [$username@$hostname](green):$directory $git_branch$git_status
         $character'';
-      # format = ''
-      #   [\[$username@$hostname\]](green) $directory $git_branch[\[$git_status\]](red)
-      #   $character'';
 
       # プロンプト上の空行を無効化
       add_newline = false;
@@ -51,10 +48,10 @@
         format = "[\\[$all_status$ahead_behind\\]]($style)";
       };
 
-      # 2行目の入力記号（一般ユーザーは '#', rootは '# ' などカスタマイズ可能）
+      # 2行目の入力記号（一般ユーザーは '% ', rootは '# ' などカスタマイズ可能）
       character = {
-        success_symbol = "[>](bold green)";
-        error_symbol = "[>](bold red)";
+        success_symbol = "[❯](green)";
+        error_symbol = "[❯](red)";
       };
     };
   };
