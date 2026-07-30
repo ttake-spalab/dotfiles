@@ -10,22 +10,28 @@
     };
   };
 
-  outputs =
-    { nixpkgs, home-manager, ... }:
-    let
-      system = "aarch64-darwin";
-      pkgs = nixpkgs.legacyPackages.${system};
-    in
-    {
-      homeConfigurations."ttake" = home-manager.lib.homeManagerConfiguration {
+  outputs = { nixpkgs, home-manager, ... }:
+  let
+    system = "aarch64-darwin";
+    pkgs = import nixpkgs { inherit system; };
+  in
+  {
+    homeConfigurations = {
+      mac-mini-m4-24 = home-manager.lib.homeManagerConfiguration {
         inherit pkgs;
 
-        # Specify your home configuration modules here, for example,
-        # the path to your home.nix.
-        modules = [ ./hosts/mac-mini-m4-24.nix ];
+        modules = [
+          ./hosts/mac-mini-m4-24.nix
+        ];
+      };
 
-        # Optionally use extraSpecialArgs
-        # to pass through arguments to home.nix
+      mba-20-m1 = home-manager.lib.homeManagerConfiguration {
+        inherit pkgs;
+
+        modules = [
+          ./hosts/mba-20-m1.nix
+        ];
       };
     };
+  };
 }

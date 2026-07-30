@@ -9,28 +9,15 @@
   ];
 
   imports = [
-    ../modules/direnv/default.nix
-    ../modules/gh/default.nix
     # ../modules/ghostty/default.nix
-    ../modules/git/default.nix
     ../modules/nvim/default.nix
     ../modules/starship/default.nix
-    ../modules/tmux/default.nix
-    ../modules/uv/default.nix
     ../modules/zsh/default.nix
   ];
 
-  home.packages = with pkgs; [
-    ffmpeg
-    jq
-    mactop
-    sox
-    tree
-  ];
+  home.packages = with pkgs; [];
 
-  home.file = {
-    ".config/gh/config.yaml".source = config.lib.file.mkOutOfStoreSymlink "${config.home.homeDirectory}/.config/gh/config.yaml";
-  };
+  home.file = {};
 
   home.sessionVariables = {
     LANG = "ja_JP.UTF-8";
@@ -38,3 +25,4 @@
 
   programs.home-manager.enable = true;
 }
+
